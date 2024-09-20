@@ -1,0 +1,137 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.smImgTxt-OtrBx {
+  padding-top:50px; 
+  padding-bottom:50px; 
+}
+.smImgTxt-InrBx {
+  background-color:#FBFCFB; 
+  padding:64px; 
+  display:flex;
+  flex-direction:row; 
+  gap:50px;
+  max-width:1400px;   
+  margin:0 auto; 
+}
+.smImgTxtInr {
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center; 
+  
+
+}
+.smImgTxtInr h2 {
+  margin:0px; 
+  font-weight:300; 
+  font-size:48px; 
+  line-height:54px; 
+  font-family: "Poppins", sans-serif !important;
+  color: #3F3631;   
+}
+
+.smImgTxtInr p {
+  margin:0px; 
+  font-weight:300; 
+  font-size:24px; 
+  line-height:36px;   
+  font-family: "Poppins", sans-serif;
+  color: #3F3631; 
+}
+
+.smImgTxt-left {
+  width:100%; 
+  max-width:292px; 
+}
+.smImgTxt-right {
+  gap:32px; 
+}
+.smImgTxt-img {
+  width:100%; 
+  max-width:292px; 
+}
+@media(max-width:1000px) {
+  .smImgTxt-InrBx {
+    padding:40px; 
+  }
+}
+@media(max-width:840px) {
+  .smImgTxt-InrBx {
+    flex-direction:column; 
+    padding:30px; 
+    gap:30px; 
+  }
+  .smImgTxt-InrBx h2{
+    text-align:center; 
+  }
+  .smImgTxt-left {
+    width:100%; 
+    max-width:180px; 
+    margin:0 auto; 
+  }
+}
+@media(max-width:520px) {
+  .smImgTxtInr h2 {
+    font-size:36px; 
+    line-height:46px; 
+  }
+  .smImgTxtInr p { 
+    font-size:18px; 
+    line-height:30px;   
+  }
+  .smImgTxt-img {
+    max-width:200px; 
+    margin:0 auto; 
+  }
+}
+
+
+</style>
+
+
+<div class="smImgTxt-OtrBx">
+  <div class="smImgTxt-InrBx">
+	<div class="smImgTxt-left smImgTxtInr">
+    	<img class="smImgTxt-img" src="{{ section.settings.mainImage | img_url: 'master' }}">
+    </div>
+	<div class="smImgTxt-right smImgTxtInr">
+    	<h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.description }}</p>
+    </div>    
+  </div>
+</div> 
+
+
+
+
+{% schema %}
+  {
+  "name": "Small Image & Text",
+  "tag": "section",
+  "class": "section smImgAndTextCstm",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"mainImage",
+      "label":"Image"
+    },
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading",
+      "default":"Heading",
+    },
+    {
+      "type":"html",
+      "id":"description",
+      "label":"Description",
+      "default":"Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Small Image & Text",
+      "category": "Custom Built"
+    }
+  ]
+  }
+{% endschema %}

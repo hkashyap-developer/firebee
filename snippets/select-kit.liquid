@@ -1,0 +1,251 @@
+<style>
+
+.optionsOtrBx {
+  display:flex; 
+  flex-direction:column; 
+  gap:20px;
+}
+
+.option {
+  gap:20px; 
+background: rgb(159,78,161);
+background: linear-gradient(0deg, rgba(159,78,161,1) 0%, rgba(45,94,206,1) 100%);
+border-radius:10px;
+  cursor:pointer; 
+}
+.optionInr {
+border-radius:8px;
+border:solid white rgba(0,0,0,0);
+padding:26px; 
+background:white; 
+}
+
+
+
+
+.optionNamePrice-Otr {
+  display:flex; 
+  margin-bottom: 14px; 
+  
+}
+.optionNamePriceCommon {
+  flex:1; 
+}
+
+.optionNamePrice-lessCut {
+max-width: 104px;
+    align: left;
+    margin-left: 0px;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    rotate: -10deg;
+    border: solid red 1px; 
+}
+.optionNamePrice-Name {
+  font-size:24px; 
+  font-weight:700;
+}
+.optionNamePrice-Price {
+  display: flex; 
+  justify-content: end; 
+  gap: 8px; 
+  font-size: 24px; 
+  color: #3F3631; 
+  
+}
+
+.popularCta {
+  background: rgb(159,78,161);
+background: linear-gradient(90deg, rgba(159,78,161,1) 0%, rgba(45,94,206,1) 100%);
+  border:none; 
+  color:white; 
+  font-size: 16px;
+  font-weight: 400; 
+  width:244px; 
+  height:30px; 
+  border-radius: 50px; 
+}
+.varCardDesc {
+color: #3F3631;
+
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 26px; 
+}
+
+
+ul.varOptFtrLst {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+ul.varOptFtrLst li {
+content: '';
+    display: inline-block;
+    background-image: url(https://cdn.shopify.com/s/files/1/0897/1157/5355/t/1/assets/Group%20924.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -35px;
+    font-size: 18px;
+    color: #3F3631;
+    padding-left: 42px;
+    font-weight: 300;
+    background-size: 31px;
+}
+  
+.varCardDesc span {
+  font-weight:600 !important; 
+}
+
+@media(max-width:1260px) {
+  .optionNamePrice-Otr {
+    flex-direction: column;
+  }
+  .optionNamePrice-Price {
+    justify-content: start;
+  }
+  ul.varOptFtrLst li {
+    font-size: 16px;
+  }
+}
+
+
+
+.active .optionInr {
+  margin:2px; 
+  border:none; 
+}
+
+.optionInr {
+  border:solid #C4C4C4 2px; 
+}
+  
+</style>
+
+
+
+
+
+
+
+
+
+<div class="optionsOtrBx">
+
+  
+  <div class="active option1 option border-gradient border-gradient-purple"> 
+  
+    <div class="optionInr">
+  	<div class="optionNamePrice-Otr">
+        <div class="optionNamePrice-Name optionNamePriceCommon">
+        Firebee Starter Kit
+        </div> 
+        <div class="optionNamePrice-Price optionNamePriceCommon">
+          <div class="optionNamePrice-less"> 
+            $999.00
+          <hr class="optionNamePrice-lessCut">
+          </div> 
+        	$379.00
+        </div>       
+      </div> 
+   
+   	<button class="popularCta">
+      MOST POPULAR KIT
+      </button> 
+  
+      <ul class="varOptFtrLst">
+        <li>
+        Access to 7 signals (and future signal releases)
+        </li>
+        <li>
+        Firebee Headband 
+        </li>
+        <li>
+        $19/month membership, first 2 months free
+        </li>
+      </ul>
+  
+      <p class="varCardDesc">
+      The starter kit is the most affordable way to get started with Firebee. Pay $299 for the Firebee headband and access to the entire Firebee Signal Catalogue for only $19 a month. <span>Membership can be cancelled anytime. No contracts. Satisfaction guaranteed.</span>
+      </p>
+      
+    </div> 
+  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="option2 option border-gradient border-gradient-purple"> 
+  
+    <div class="optionInr">
+  	<div class="optionNamePrice-Otr">
+        <div class="optionNamePrice-Name optionNamePriceCommon">
+        Founder’s Kit
+        </div> 
+        <div class="optionNamePrice-Price optionNamePriceCommon">
+        	$799.00
+        </div>       
+      </div> 
+   
+
+      <ul class="varOptFtrLst">
+        <li>
+        Access to 7 signals (and future signal releases)
+        </li>
+        <li>
+        Firebee Headband 
+        </li>
+        <li>
+        No Monthly Membership
+        </li>
+      </ul>
+  
+      <p class="varCardDesc">
+        The Founders kit allows you to get the Firebee headband and lifetime access to the entire Firebee Signal Catalogue for a one-time payment. The Founders is kit can be paid through Affirm allowing customers to make small payments of $73 a month.
+      </p>
+      
+    </div> 
+  </div> 
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+jQuery(document).ready(function() {
+
+    $(".option1").click(function(){
+      $('label[for^="template--23445741633851__main-1-0"]').click();
+      $(".option").toggleClass("active"); 
+      $(this).addClass("active"); 
+    }); 
+  
+    $(".option2").click(function(){
+      $('label[for^="template--23445741633851__main-1-1"]').click();
+      $(".option").toggleClass("active"); 
+      $(this).addClass("active");
+  }); 
+  
+});
+  
+</script>
